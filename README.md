@@ -21,6 +21,7 @@ A simple character-level RNN implementation in PyTorch for generating text. This
 │   ├── UnstructuredText.py   # Dataset handling
 │   └── data/                 # Training data directory
 ├── chkpts/                   # Saved model checkpoints
+├── config.py          	      # Hyperparameter configuration
 ├── train.py                  # Training script
 └── test.py                   # Generation/inference script
 ```
@@ -35,7 +36,7 @@ The model consists of:
 
 ## Configuration
 
-Key parameters in the config dictionary:
+Model hyperparameters are centralized in config.py for easier experimentation and consistency between training and generation.
 ```python
 {
     "sequence_length": 50,	# Length of input sequences
@@ -72,3 +73,10 @@ The model checkpoint will be saved in the `chkpts/` directory with a timestamp.
 ```bash
 python test.py
 ```
+
+## Limitations
+
+- Uses a simple vanilla RNN (could be extended to LSTM/GRU)
+- Single-layer architecture by default
+- No dropout or other regularization
+- Character-level only (no word-level or subword tokenization)
