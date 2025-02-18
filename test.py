@@ -5,19 +5,7 @@ import torch.optim.lr_scheduler as lr
 
 from datasets.UnstructuredText import UnstructuredCharacterData
 from models.chaRNN import chaRNN
-
-config = {
-    "sequence_length": 50,
-    "batch_size": 64,
-    "max_epochs": 200,
-    "hidden_state_dim": 128,
-    "embedding_dim": 32,
-    "num_layers": 1,
-    "lr": 0.001,
-    "warmup_epoch_ratio": 0.2,
-    "warmup_lr_factor": 0.25,
-    "temperature": 1,
-}
+from config import config
 
 use_cuda_if_avail = True # TODO: Fill these in with your specs
 use_mps_if_avail = True
