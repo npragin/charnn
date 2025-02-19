@@ -2,6 +2,25 @@
 
 A simple character-level RNN implementation in PyTorch for generating text. This model learns to predict the next character in a sequence and can generate new text in the style of the training data.
 
+<pre style="font-size: 12px">
+New Shrek just dropped arrattlese. I tell have layers. I'm to you?
+-Uh, no. No! No! No! No! No! Noppotic, don't look  down. Don't mean the shoor before this beforge princess.
+-Oh, you want to talk and her face
+Oh-oh-oh
+It's a new romance
+Oh-oh-oh
+The best years you goions. 
+Ander through comming to play
+Gonna good. Not have lay it place you have to do it that foret my bad say 
+off and get me
+{Belling}
+{Shouting}
+{Roaring}
+{Gasps}
+-Oh, hey, wait, but you talking about me!
+-Uh, that you got a good it the should Shrek.
+</pre>
+
 ## Features
 
 - Character-level text generation using vanilla RNN
@@ -39,7 +58,7 @@ The model consists of:
 Model hyperparameters are centralized in config.py for easier experimentation and consistency between training and generation.
 ```python
 {
-    "sequence_length": 50,	# Length of input sequences
+    "sequence_length": 50,	    # Length of input sequences
     "batch_size": 64,       	# Batch size for training
     "max_epochs": 200,      	# Number of training epochs
     "hidden_state_dim": 128,	# RNN hidden state dimension
